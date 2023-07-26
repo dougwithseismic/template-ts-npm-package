@@ -117,7 +117,62 @@ The magic behind the type declarations in this setup is the combination of TypeS
   
 - These type declarations are bundled in the `dist` directory, which gets uploaded to npm when you publish. This ensures that anyone installing your package also gets the type declarations, making it easier to use your package in TypeScript projects.
 
----
+## Importing and Using the Your Package Once Published
+
+### Installing the Package
+
+First, you need to install the package from npm:
+
+```bash
+npm install package-name
+```
+
+or with Yarn:
+
+```bash
+yarn add package-name
+```
+
+### Using the Package in Your Code
+
+The package provides both default and named exports for maximum flexibility. Here's how you can import and use them:
+
+#### Importing the Default Export
+
+The default export is the primary functionality provided by the package. To import and use it:
+
+```typescript
+import defaultExport from 'package-name';
+
+// Use the defaultExport in your code
+defaultExport();
+```
+
+#### Importing Types or Other Named Exports
+
+If you need any specific types or utilities provided by the package, you can import them alongside the default export:
+
+```typescript
+import defaultExport, { SomeType } from 'package-name';
+
+// Using the type in your code
+const someVariable: SomeType = {
+  // ...your object structure here
+};
+```
+
+Or, if you only need the named exports:
+
+```typescript
+import { SomeType } from 'package-name';
+
+// Using the type in your code
+const someVariable: SomeType = {
+  // ...your object structure here
+};
+```
+
+Feel free to adjust the above section to better fit the specifics of your package and its exports.
 
 ## Contributing
 
