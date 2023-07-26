@@ -2,8 +2,8 @@
     "name": "template-ts-npm-package",
     "version": "1.0.0",
     "description": "A template for scaffolding npm packages with Type Support",
-    "main": "index.js",
-    "types": "./dist/index.d.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "engines": {
         "node": ">=14.0.0"
     },
